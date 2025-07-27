@@ -3,7 +3,7 @@
 ## Why use Personal Knowledge Management?
 Most Information doesn't come in neatly wrapped packages. 
 Instead, our brains are regularly flooded with various streams of data, originating from many different sources. 
-To better make sense of it all, practicing some kind of personal knowledge management ([[PKM]]) is essential. 
+To better make sense of it all, practicing some kind of personal knowledge management (PKM) is essential. 
 
 ## Why use Obsidian?
 Obsidian is a powerful and intuitive tool to document and interconnect topics you care about. 
@@ -46,7 +46,10 @@ To remove this white space, go to Settings > Editor and turn off the field label
 #### Files and Links, define attachment folder
 By default, every new image you paste into a note will be copied as attachment into the root vault folder, which leads to clutter. 
 So before starting to paste images into your notes, it makes sense to define a dedicated folder where new attachments will be automatically stored. 
-![[Pasted image 20250725152548.png|400]]
+
+<div>
+  <img src="pics/files-and-links-define-attachment-folder.png" width="500">
+</div>
 
 #### Daily notes, define format and locations
 To use Obsidian as a journal, define
@@ -59,13 +62,18 @@ To use Obsidian as a journal, define
 - Open daily note on startup
 	- I turned this on
 
-![[Pasted image 20250726090841.png]]
+<div>
+  <img src="pics/daily-notes-define-format-and-locations.png" width="500">
+</div>
 
 #### Sync, turn on for plugins
 I'm using Obsidian on my laptop and also on my phone. 
 This lets me take notes on the go and refactor them later by using a keyboard. 
 To ensure there are no synchronization errors, I turned on plugin synchronization. 
-![[Pasted image 20250726090549.png|400]]
+
+<div>
+  <img src="pics/sync-turn-on-for-plugins.png" width="500">
+</div>
 
 ## How to interconnect your second brain?
 A key strength of Obsidian is its flexibility, which makes it a great fit for our malleable first brains. 
@@ -99,7 +107,10 @@ where contains(file.tags, "#grateful")
 sort file.mtime desc
 limit 3
 ```
-![[Pasted image 20250727085928.png|600]]
+
+<div>
+  <img src="pics/use-dataview-plugin.png" width="500">
+</div>
 
 ### [Links](https://help.obsidian.md/links)
 Use below syntax to create a link to a file on your computer or also online. 
@@ -126,11 +137,15 @@ Everything above those dashes will be treated as metadata.
 Graph view lets you visualize the relationships between your notes. 
 In this view, I find it helpful to filter out the daily notes by adding `path: -daily-notes`
 
-![[Pasted image 20250726093402.png|700]]
+<div>
+  <img src="pics/graph-view-filter-path.png" width="500">
+</div>
 
 Easter-egg: The large circular arrangement on the top left are flashcards to learn Portuguese 😅
 
-![[Pasted image 20250726093404.png|700]]
+<div>
+  <img src="pics/graph-view-pt.png" width="500">
+</div>
 
 ## How to get overview and navigate within Obsidian?
 For me the easiest way to view and navigate are
@@ -149,7 +164,8 @@ For me the easiest way to view and navigate are
 This chapter lists some Obsidian Community Plugins in alphabetical order, which I found useful for my personal knowledge management through trial and error. 
 Each subsection in this chapter mentions a Community Plugin as title and lists its Key Features as bullet points. 
 
-ToDo: Add examples and how-to for the content still in `quotes`.
+ToDo xxx 
+Add examples and how-to for the content still in `quotes`.
 
 ### Code Editor Shortcuts
 - enables hotkey definition to efficiently navigate between markdown sections (marked with leading `#`) inside a long note
@@ -204,14 +220,26 @@ Ctrl+V will
 
 #### use `|width_in_pixels` to set image width
 To adjust the display size of an image, you can add `|width_in_pixels` after the filename (`![[Pasted image 20250516084207.png|300]]`). 
-![[Pasted image 20250516084257.png|300]]
+
+<div>
+  <img src="pics/image-width-in-pixels.png" width="500">
+</div>
+
 - Limitation: Images accessed from external url source cannot be rescaled directly into obsidian. 
 - Workaround: Since rescaling requires a locally stored image, download or take a screenshot. 
 
-#### use `<div>` to place multiple images side-by-side
+#### use HTML syntax to place multiple images side-by-side
+
+```html
 <div>
-  <img src="image_1.svg" width="500">
-  <img src="image_2.png" width="300">
+  <img src="pics/graph-view-filter-path.png" width="200">
+  <img src="pics/graph-view-pt.png" width="200">
+</div>
+```
+
+<div>
+  <img src="pics/graph-view-filter-path.png" width="200">
+  <img src="pics/graph-view-pt.png" width="200">
 </div>
 
 ### How to create tables?
@@ -259,7 +287,10 @@ There are several ways to keep your vault clean.
 #### Rearrange files within your vault
 
 Move file/folder to...
-![[Pasted image 20250726112650.png|300]]
+
+<div>
+  <img src="pics/move-file-to.png" width="300">
+</div>
 
 #### Rearrange sections within a file
 
@@ -276,10 +307,18 @@ If you use recurring design patterns like for example code blocks, using templat
 Here's how you can setup a template to create the below python code block.
 
 1. create template file inside template folder
-   ![[Pasted image 20250727110555.png|400]]
+
+<div>
+  <img src="pics/template-code-python.png" width="400">
+</div>
+
 2. link that template to a custom hotkey
-   ![[Pasted image 20250727110720.png|900]]
-3. paste template content into current note by using hotkey (Ctrl + Shift + P)
+
+<div>
+  <img src="pics/template-code-python-hotkey.png" width="500">
+</div>
+
+2. paste template content into current note by using hotkey (Ctrl + Shift + P)
 ```python
 # this empty code block template was created by using a hotkey
 ```
@@ -293,6 +332,7 @@ While creating a note from a template with Templater code, that code will be con
 
 Today for example, the line
 - Previous day: [[<% tp.date.now("yyyy-MM-DD ddd", -1) %>]]
+
 was converted into a link to yesterdays daily note
 - Previous day: [[2025-07-26 Sat]]
 
@@ -302,7 +342,7 @@ Since tomorrows daily note does not exist yet, the line below gets converted int
 - Next day: [[<% tp.date.now("yyyy-MM-DD ddd", 1) %>]]
 - Next day: [[2025-07-28 Mon]]
 
-![[daily-note-links-existing-and-greyed-out.png|300]]
+<div><img src="pics/daily-note-links-existing-and-greyed-out.png" width="300"></div>
 
 **CAREFUL!!** 
 - If you click onto a greyed-out link, you create an empty file with that name (it's a feature, not a bug 🐛). 
@@ -316,9 +356,9 @@ Since this prioritization list can get quite long, I'm [[linking to a separate f
 
 ###### How to create tasks inside notes?
 
-The tasks plugin converts the following syntax into checkbox items, which can be toggled on/off.
-`- [ ] ` becomes ![[Pasted image 20250727112212.png]]
-`- [x] ` becomes ![[Pasted image 20250727112145.png]]
+The tasks plugin converts the following syntax into checkbox items, which can be toggled between todo/done.
+`- [ ] ` becomes <div><img src="pics/checkbox-todo.png"></div>
+`- [x] ` becomes <div><img src="pics/checkbox-done.png"></div>
 
 No matter in which note you define a task, it will become part of the dynamic lists shown below - as long as it's marked as `not done`. 
 - [ ] a task which is not done has a single empty-space-character inside its checkbox
@@ -326,10 +366,10 @@ No matter in which note you define a task, it will become part of the dynamic li
 
 To classify tasks you can add parameters
 - due date
-   ![[Pasted image 20250727112904.png]]
-   ![[Pasted image 20250727112715.png]]
+<div><img src="pics/due-date.png"></div>
+<div><img src="pics/due-date-parsed.png"></div>
 - priority
-   ![[Pasted image 20250727112837.png]]
+<div><img src="pics/task-priority-options.png"></div>
 
 ###### urgent and important --> do it
 ```tasks  
@@ -376,10 +416,14 @@ hide backlink
 
 
 ##### journalling
-🤗 placeholders to note what I'm #grateful for today
+
+```obsidian
+🤗 list placeholder to note what I'm #grateful for today
 - 
-💩 checkboxes to have fun getting shit done  
+
+💩 checkbox placeholder to have fun getting shit done 
 - [ ] 
+```
 
 ##### Google Calendar (advanced)
 📢 use plugin "Google Calendar" to include your upcoming events inside the daily note
@@ -410,7 +454,7 @@ Right click onto a file or folder in tree structure.
 
 Obsidian allows you to customize hotkeys, also known as keyboard shortcuts.
 This section lists the hotkeys I am using in Obsidian. 
-Some of the hotkeys were [[#Customize hotkeys for common functions|customized as shown below]].
+Some of the hotkeys were customized as shown below.
 
 ### Create
 
@@ -485,7 +529,7 @@ Some of the hotkeys were [[#Customize hotkeys for common functions|customized as
 To increase your productivity in Obsidian, I recommend you create hotkeys to streamline your personal knowledge management. 
 To customize hotkeys, navigate to Settings (gear symbol on bottom left) and select Hotkeys. 
 
-![[Pasted image 20250725200930.png|400]]
+<div><img src="pics/settings-hotkeys.png" width="400"></div>
 
 #### List of customized hotkeys and their label to search in settings
 
