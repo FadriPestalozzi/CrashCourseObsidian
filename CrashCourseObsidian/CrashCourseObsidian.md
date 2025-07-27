@@ -39,7 +39,9 @@ Here are the settings-changes I find useful.
 By default, the note editor window shows a lot of empty space on the left and right side. 
 To get a quicker overview of a note, I prefer a more compact view. 
 To remove this white space, go to Settings > Editor and turn off the field labeled "Readable line length". 
-![[Pasted image 20250518133538.png|500]]
+<div>
+  <img src="pics/settings-editor-readable-line-length.png" width="500">
+</div>
 
 #### Files and Links, define attachment folder
 By default, every new image you paste into a note will be copied as attachment into the root vault folder, which leads to clutter. 
@@ -379,8 +381,8 @@ hide backlink
 💩 checkboxes to have fun getting shit done  
 - [ ] 
 
-##### google calendar (advanced xxx)
-📢 included my google calendar to see what's happening next
+##### Google Calendar (advanced)
+📢 use plugin "Google Calendar" to include your upcoming events inside the daily note
 ```gEvent
 type: schedule
 date: today {{date:YYYY-MM-DD}}  
