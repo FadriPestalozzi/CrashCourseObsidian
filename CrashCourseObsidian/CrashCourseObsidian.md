@@ -83,20 +83,21 @@ Tags are keywords or topics that help you quickly find the notes you want
 
 #### search for tags within target root
 You can dynamically search for tags by using below syntax.
-This example will show all occurrences of the target tag #grateful of notes inside the root folder "daily-notes/". 
+This example will show all occurrences of the target tag #standup-comedy  of notes inside the root folder "daily-notes/". 
 ``` query 
-tag:grateful path:"daily-notes/"
+tag:standup-Comedy path:"daily-notes/"
 ```
 
 ##### Use Dataview Plugin 
-Use Dataview Plugin for more complex queries. Below an example to show a maximum of 10 notes containing the target tag #grateful, starting with the most recently modified one. This dynamic search is restricted to notes inside the root folder "daily-notes". 
+Use Dataview Plugin for more complex queries. Below an example to show a maximum of 3 notes containing the target tag #grateful, starting with the most recently modified one. This dynamic search is restricted to notes inside the root folder "daily-notes". 
 ``` dataview
 table file.mtime as "Last Modified"
 from "daily-notes"
 where contains(file.tags, "#grateful")
 sort file.mtime desc
-limit 10
+limit 3
 ```
+![[Pasted image 20250727085928.png|600]]
 
 ### [Links](https://help.obsidian.md/links)
 Use below syntax to create a link to a file on your computer or also online. 
@@ -266,25 +267,120 @@ Drag and drop sections in right panel (aka in the outline).
 
 ### How to use templates?
 
-xxx WORK-IN-PROGRESS xxx
+#### How to build a template to manually add into a note?
 
-#### Daily note as template example
+If you use recurring design patterns like for example code blocks, using templates can make your life easier. 
 
-[[0-todo]]
+Here's how you can setup a template to create the below python code block.
+
+1. create template file inside template folder
+   ![[Pasted image 20250727110555.png|400]]
+2. link that template to a custom hotkey
+   ![[Pasted image 20250727110720.png|900]]
+3. paste template content into current note by using hotkey (Ctrl + Shift + P)
+```python
+# this empty code block template was created by using a hotkey
+```
+
+#### How to build a daily note template?
+
+This section contains sample blocks from my daily note template which could inspire yours as well. 
+##### links
+
+While creating a note from a template with Templater code, that code will be converted into its output (=parsed) in that very moment. 
+
+Today for example, the line
 - Previous day: [[<% tp.date.now("yyyy-MM-DD ddd", -1) %>]]
+was converted into a link to yesterdays daily note
+- Previous day: [[2025-07-26 Sat]]
+
+###### greyed out links
+
+Since tomorrows daily note does not exist yet, the line below gets converted into a greyed out link 
 - Next day: [[<% tp.date.now("yyyy-MM-DD ddd", 1) %>]]
+- Next day: [[2025-07-28 Mon]]
 
-# 🤗 what am I grateful for today? 
+![[daily-note-links-existing-and-greyed-out.png|300]]
+
+**CAREFUL!!** 
+- If you click onto a greyed-out link, you create an empty file with that name (it's a feature, not a bug 🐛). 
+- If a file with the exact name of a daily note already exists, obsidian will not create a new one from this daily template.
+- So to ensure daily-notes are created based on your template, delete any accidentally pre-created files of the same name. 
+
+##### prioritize
+To focus on what is most relevant for you right now, some kind of task prioritization makes sense. 
+Inspired by the Eisenhower matrix, I'm using the Tasks plugin to dynamically distribute all tasks into 4 categories. 
+Since this prioritization list can get quite long, I'm [[linking to a separate file inside the daily template]]. 
+
+###### How to create tasks inside notes?
+
+The tasks plugin converts the following syntax into checkbox items, which can be toggled on/off.
+`- [ ] ` becomes ![[Pasted image 20250727112212.png]]
+`- [x] ` becomes ![[Pasted image 20250727112145.png]]
+
+No matter in which note you define a task, it will become part of the dynamic lists shown below - as long as it's marked as `not done`. 
+- [ ] a task which is not done has a single empty-space-character inside its checkbox
+- [x] a task which is done has a single non-space-character inside its checkbox
+
+To classify tasks you can add parameters
+- due date
+   ![[Pasted image 20250727112904.png]]
+   ![[Pasted image 20250727112715.png]]
+- priority
+   ![[Pasted image 20250727112837.png]]
+
+###### urgent and important --> do it
+```tasks  
+not done  
+
+# urgent
+due before tomorrow
+
+# important
+priority is high 
+```
+###### urgent but not important --> delegate it
+```tasks  
+not done  
+
+# urgent
+due before tomorrow
+
+# not important
+priority is not high 
+``` 
+###### important but not urgent --> define it
+```tasks  
+not done  
+
+# not urgent
+due after today
+sort by due
+
+# important
+(priority is high) OR (priority is highest)
+```
+###### neither important nor urgent --> drop it
+```tasks  
+not done  
+due after today  
+sort by due
+short mode  
+hide edit button  
+hide backlink  
+```  
+
+
+
+
+##### journalling
+🤗 placeholders to note what I'm #grateful for today
 - 
-
-## 🫀 be kind to your body and mind
-- 
-
-## 💩 have fun getting shit done  
+💩 checkboxes to have fun getting shit done  
 - [ ] 
 
-# 📢 what's happening next?
-
+##### google calendar (advanced xxx)
+📢 included my google calendar to see what's happening next
 ```gEvent
 type: schedule
 date: today {{date:YYYY-MM-DD}}  
@@ -326,12 +422,12 @@ Some of the hotkeys were [[#Customize hotkeys for common functions|customized as
 
 ### Edit
 
-| action                                  | shortcut         |
-| --------------------------------------- | ---------------- |
-| move current note into different folder | Ctrl + Shift + M |
-| paste without format                    | Ctrl + Shift + V |
-| rename current note                     | F2               |
-| switch editor/read mode                 | Ctrl + E         |
+| action                                                                                | shortcut         |
+| ------------------------------------------------------------------------------------- | ---------------- |
+| move current note into different folder                                               | Ctrl + Shift + M |
+| paste without format                                                                  | Ctrl + Shift + V |
+| rename current note --> this automatically updates any links pointing to that note 💌 | F2               |
+| switch editor/read mode                                                               | Ctrl + E         |
 
 ### Navigate
 
