@@ -25,5 +25,5 @@ To dig deeper, I encourage you to explore the [amazing online documentation of O
 
 # How?
 
-Checkout the [detailed guide on how to set up and use Obsidian](How.md) 🚀
+Checkout the [detailed guide on how to set up and use Obsidian](how.md) 🚀
 
