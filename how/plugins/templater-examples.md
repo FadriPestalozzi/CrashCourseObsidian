@@ -37,7 +37,7 @@ To configure a hotkey for this new template
 ## applying template
 
 ```python
-
+# this empty code block template was created by using a hotkey
 ```
 
 Using the hotkey `Ctrl + Shift + P` I just inserted the empty code block above. 
