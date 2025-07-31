@@ -6,9 +6,9 @@ Checkout the [detailed guide on how to set up Obsidian](how/setup.md) 🛠️
 
 Checkout the [comprehensive guide on interconnecting your second brain](how/interconnect.md) 🧠
 
-# How to get overview and navigate within Obsidian?
+# How to navigate Obsidian?
 
-Checkout the [essential guide on getting overview and navigation](how/overview.md) 🗺️
+Checkout the [essentials on how to navigate within Obsidian](how/navigation.md) 🗺️
 
 # Which Community Plugins are useful?
 
@@ -17,10 +17,6 @@ Checkout the [curated list of useful Community Plugins](how/plugins.md) 🧩
 # How to write Obsidian?
 
 Checkout the [complete guide on writing notes in Obsidian](how/writing.md) ✍️
-
-# How to quickly navigate within Obsidian?
-
-Checkout the [quick navigation tips and tricks](how/navigation.md) 🏃
 
 # Which Hotkeys are useful?
 
