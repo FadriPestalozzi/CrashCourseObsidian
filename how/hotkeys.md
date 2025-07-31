@@ -77,7 +77,7 @@ Some of the hotkeys were customized as shown below.
 To increase your productivity in Obsidian, I recommend you create hotkeys to streamline your personal knowledge management. 
 To customize hotkeys, navigate to Settings (gear symbol on bottom left) and select Hotkeys. 
 
-<div><img src="pics/settings-hotkeys.png" width="400"></div>
+<div><img src="../pics/settings-hotkeys.png" width="400"></div>
 
 ### List of customized hotkeys and their label to search in settings
 

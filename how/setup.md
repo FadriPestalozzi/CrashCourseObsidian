@@ -1,8 +1,10 @@
 # How to setup Obsidian?
 
-## [download and install](https://obsidian.md/download)
-- cross-platform, available for mobile (iOS, Android), and desktop (Windows, Mac, Linux)
-- during installation, define the local path of your Obsidian vault
+## [Download and install Obsidian](https://obsidian.md/download)
+- cross-platform, available for 
+  - mobile (iOS, Android), and 
+  - desktop (Windows, Mac, Linux)
+- during installation, define the local path to your Obsidian vault
 
 ## Settings
 Obsidian is highly customizable. 
@@ -13,7 +15,7 @@ By default, the note editor window shows a lot of empty space on the left and ri
 To get a quicker overview of a note, I prefer a more compact view. 
 To remove this white space, go to Settings > Editor and turn off the field labeled "Readable line length". 
 <div>
-  <img src="pics/settings-editor-readable-line-length.png" width="500">
+  <img src="../pics/settings-editor-readable-line-length.png" width="500">
 </div>
 
 ### Files and Links, define attachment folder
@@ -21,7 +23,7 @@ By default, every new image you paste into a note will be copied as attachment i
 So before starting to paste images into your notes, it makes sense to define a dedicated folder where new attachments will be automatically stored. 
 
 <div>
-  <img src="pics/files-and-links-define-attachment-folder.png" width="500">
+  <img src="../pics/files-and-links-define-attachment-folder.png" width="500">
 </div>
 
 ### Daily notes, define format and locations
@@ -36,7 +38,7 @@ To use Obsidian as a journal, define
 	- I turned this on
 
 <div>
-  <img src="pics/daily-notes-define-format-and-locations.png" width="500">
+  <img src="../pics/daily-notes-define-format-and-locations.png" width="500">
 </div>
 
 ### Sync, turn on for plugins
@@ -45,5 +47,5 @@ This lets me take notes on the go and refactor them later by using a keyboard.
 To ensure there are no synchronization errors, I turned on plugin synchronization. 
 
 <div>
-  <img src="pics/sync-turn-on-for-plugins.png" width="500">
+  <img src="../pics/sync-turn-on-for-plugins.png" width="500">
 </div> 

@@ -32,7 +32,7 @@ limit 3
 ```
 
 <div>
-  <img src="pics/use-dataview-plugin.png" width="500">
+  <img src="../pics/use-dataview-plugin.png" width="500">
 </div>
 
 ## [Links](https://help.obsidian.md/links)
@@ -61,11 +61,13 @@ Graph view lets you visualize the relationships between your notes.
 In this view, I find it helpful to filter out the daily notes by adding `path: -daily-notes`
 
 <div>
-  <img src="pics/graph-view-filter-path.png" width="500">
+  <img src="../pics/graph-view-filter-path.png" width="500">
 </div>
 
-Easter-egg: The large circular arrangement on the top left are flashcards to learn Portuguese 😅
+### 🥚 Easter-egg
+
+The large circular arrangement on the top left are [Anki](https://apps.ankiweb.net/) flashcards defined in a single humongous note to learn Brazilian Portuguese 😅
 
 <div>
-  <img src="pics/graph-view-pt.png" width="500">
+  <img src="../pics/graph-view-pt.png" width="500">
 </div> 

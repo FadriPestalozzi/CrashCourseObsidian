@@ -17,31 +17,34 @@ This table lists key elements in the markdown-based syntax used in Obsidian.
 Images can be pasted from the clipboard (Ctrl+C / Ctrl+V) and also accessed by their relative path starting from vault root. 
 
 Ctrl+V will
-- create an embedding link `![[Pasted image 20250516084207.png]]`
-- store the pasted image in the attachments folder (see [[#Files and Links, Define attachment folder]])
+1. create an embedding link `![[Pasted image 20250516084207.png]]` and
+2. store that pasted image in the attachments folder (see setup section on [Files and Links, Define attachment folder](setup.md#files-and-links-define-attachment-folder))
 
-### use `|width_in_pixels` to set image width
-To adjust the display size of an image, you can add `|width_in_pixels` after the filename (`![[Pasted image 20250516084207.png|300]]`). 
+### Use `|width_in_pixels` to set image width
+- To adjust the display size of an image, you can add `|width_in_pixels` after the filename: 
+- `![[Pasted image 20250516084207.png|300]]`
 
 <div>
-  <img src="pics/image-width-in-pixels.png" width="500">
+  <img src="../pics/image-width-in-pixels.png" width="500">
 </div>
 
-- Limitation: Images accessed from external url source cannot be rescaled directly into obsidian. 
+### Limitation and Workaround
+
+- Limitation: Images accessed from external URL cannot be rescaled directly into obsidian
 - Workaround: Since rescaling requires a locally stored image, download or take a screenshot. 
 
 ### use HTML syntax to place multiple images side-by-side
 
 ```html
 <div>
-  <img src="pics/graph-view-filter-path.png" width="200">
-  <img src="pics/graph-view-pt.png" width="200">
+  <img src="../pics/graph-view-filter-path.png" width="200">
+  <img src="../pics/graph-view-pt.png" width="200">
 </div>
 ```
 
 <div>
-  <img src="pics/graph-view-filter-path.png" width="200">
-  <img src="pics/graph-view-pt.png" width="200">
+  <img src="../pics/graph-view-filter-path.png" width="200">
+  <img src="../pics/graph-view-pt.png" width="200">
 </div>
 
 ## How to create tables?
@@ -49,16 +52,54 @@ Obsidian works with both markdown-style and HTML-style tables.
 - markdown tables are easier to adjust but less customizable
 - if you need full control, HTML tables are the way to go
 
-### example markdown-table
+### example markdown-table --> easy but customization limited 
+
+
+```markdown
+| key      | action               |
+| -------- | -------------------- |
+| Ctrl + , | open settings        |
+| Ctrl + P | open command palette |
+```
+#### output table
 
 | key      | action               |
 | -------- | -------------------- |
 | Ctrl + , | open settings        |
 | Ctrl + P | open command palette |
 
-### example HTML-table
 
-<table style="width:30%">
+
+### example HTML-table --> complex but flexible column width
+
+```html
+<table style="width:70%">
+  <colgroup>
+    <col style="width:40%">
+    <col style="width:60%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>key</th>
+      <th>action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ctrl + ,</td>
+      <td>open settings</td>
+    </tr>
+    <tr>
+      <td>Ctrl + P</td>
+      <td>open command palette</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### output table
+
+<table style="width:70%">
   <colgroup>
     <col style="width:40%">
     <col style="width:60%">
@@ -91,14 +132,30 @@ There are several ways to keep your vault clean.
 Move file/folder to...
 
 <div>
-  <img src="pics/move-file-to.png" width="300">
+  <img src="../pics/move-file-to.png" width="300">
 </div>
 
 ### Rearrange sections within a file
 
 Drag and drop sections in right panel (aka in the outline).
 
-![[2025-07-26 10_17_59-Greenshot-cropped.png|300]] ![[2025-07-26 10_18_12-Greenshot-cropped.png|300]]  ![[2025-07-26 10_18_22-Greenshot-cropped.png|300]]
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border: 1px solid black; text-align: center;">
+      <div style="font-weight: bold; margin-bottom: 0.5em;">Step 1</div>
+      <img src="../pics/writing-drag-and-drop-1.png" width="300">
+    </td>
+    <td style="border: 1px solid black; text-align: center;">
+      <div style="font-weight: bold; margin-bottom: 0.5em;">Step 2</div>
+      <img src="../pics/writing-drag-and-drop-2.png" width="300">
+    </td>
+    <td style="border: 1px solid black; text-align: center;">
+      <div style="font-weight: bold; margin-bottom: 0.5em;">Step 3</div>
+      <img src="../pics/writing-drag-and-drop-3.png" width="300">
+    </td>
+  </tr>
+</table>
+
 
 ## How to use templates?
 
@@ -111,13 +168,13 @@ Here's how you can setup a template to create the below python code block.
 1. create template file inside template folder
 
 <div>
-  <img src="pics/template-code-python.png" width="400">
+  <img src="../pics/template-code-python.png" width="400">
 </div>
 
 2. link that template to a custom hotkey
 
 <div>
-  <img src="pics/template-code-python-hotkey.png" width="500">
+  <img src="../pics/template-code-python-hotkey.png" width="500">
 </div>
 
 2. paste template content into current note by using hotkey (Ctrl + Shift + P)
@@ -133,7 +190,7 @@ This section contains sample blocks from my daily note template which could insp
 While creating a note from a template with Templater code, that code will be converted into its output (=parsed) in that very moment. 
 
 Today for example, the line
-- Previous day: [[2025-07-28 Mon]]
+- Previous day: `[[<% tp.date.now("yyyy-MM-DD ddd", -1) %>]]`
 
 was converted into a link to yesterdays daily note
 - Previous day: [[2025-07-26 Sat]]
@@ -141,78 +198,21 @@ was converted into a link to yesterdays daily note
 ##### greyed out links
 
 Since tomorrows daily note does not exist yet, the line below gets converted into a greyed out link 
-- Next day: [[2025-07-30 Wed]]
+- Next day: `[[<% tp.date.now("yyyy-MM-DD ddd", 1) %>]]`
 - Next day: [[2025-07-28 Mon]]
 
-<div><img src="pics/daily-note-links-existing-and-greyed-out.png" width="300"></div>
+<div><img src="../pics/daily-note-links-existing-and-greyed-out.png" width="300"></div>
 
 **CAREFUL!!** 
-- If you click onto a greyed-out link, you create an empty file with that name (it's a feature, not a bug 🐛). 
+- If you click onto a greyed-out link, you create an empty file with that name in the root folder (it's a feature, not a bug 🐛). 
 - If a file with the exact name of a daily note already exists, obsidian will not create a new one from this daily template.
 - So to ensure daily-notes are created based on your template, delete any accidentally pre-created files of the same name. 
+	- Also, that helps you to keep track 😅
 
 #### prioritize
 To focus on what is most relevant for you right now, some kind of task prioritization makes sense. 
 Inspired by the Eisenhower matrix, I'm using the Tasks plugin to dynamically distribute all tasks into 4 categories. 
-Since this prioritization list can get quite long, I'm [[linking to a separate file inside the daily template]]. 
-
-##### How to create tasks inside notes?
-
-The tasks plugin converts the following syntax into checkbox items, which can be toggled between todo/done.
-`- [ ] ` becomes <div><img src="pics/checkbox-todo.png"></div>
-`- [x] ` becomes <div><img src="pics/checkbox-done.png"></div>
-
-No matter in which note you define a task, it will become part of the dynamic lists shown below - as long as it's marked as `not done`. 
-- [ ] a task which is not done has a single empty-space-character inside its checkbox
-- [x] a task which is done has a single non-space-character inside its checkbox
-
-To classify tasks you can add parameters
-- due date
-<div><img src="pics/due-date.png"></div>
-<div><img src="pics/due-date-parsed.png"></div>
-- priority
-<div><img src="pics/task-priority-options.png"></div>
-
-##### urgent and important --> do it
-```tasks  
-not done  
-
-# urgent
-due before tomorrow
-
-# important
-priority is high 
-```
-##### urgent but not important --> delegate it
-```tasks  
-not done  
-
-# urgent
-due before tomorrow
-
-# not important
-priority is not high 
-``` 
-##### important but not urgent --> define it
-```tasks  
-not done  
-
-# not urgent
-due after today
-sort by due
-
-# important
-(priority is high) OR (priority is highest)
-```
-##### neither important nor urgent --> drop it
-```tasks  
-not done  
-due after today  
-sort by due
-short mode  
-hide edit button  
-hide backlink  
-```  
+Since this prioritization list can get quite long, I'm [linking to a separate file inside the daily template](plugins/tasks-examples.md#arrange-tasks-into-eisenhower-groups). 
 
 
 
@@ -233,3 +233,76 @@ hide backlink
 type: schedule
 date: today {{date:YYYY-MM-DD}}  
 ``` 
+
+##### sample output
+
+- current day highlighted
+- past events greyed out
+
+<img src="../pics/google-calendar.png" width="300">
+
+## How to create tasks inside notes?
+
+The tasks plugin converts the following syntax into checkbox items, which can be toggled between todo/done.
+
+`- [ ] ` is displayed as <img src="../pics/checkbox-todo.png">
+
+`- [x] ` is displayed as <img src="../pics/checkbox-done.png">
+
+Hint: Checkbox items include an empty space-character at the end. 
+
+No matter in which note you define a task, it will become part of the dynamic lists shown below - as long as it's marked as `not done`. 
+- [ ] a task which is not done has a single empty-space-character inside its checkbox
+- [x] a task which is done has a single non-space-character inside its checkbox
+
+<div><img src="../pics/writing-task-done-or-not-done.png" width="600"></div>
+
+To classify tasks you can add parameters
+- due date
+<div><img src="../pics/due-date.png"></div>
+<div><img src="../pics/due-date-parsed.png"></div>
+- priority
+<div><img src="../pics/task-priority-options.png"></div>
+
+### urgent and important --> do it
+```tasks  
+not done  
+
+# urgent
+due before tomorrow
+
+# important
+(priority is high) OR (priority is highest)
+```
+### urgent but not important --> delegate it
+```tasks  
+not done  
+
+# urgent
+due before tomorrow
+
+# not important
+(priority is not high) AND (priority is not highest)
+``` 
+### important but not urgent --> define it
+```tasks  
+not done  
+
+# not urgent
+due after today
+sort by due
+
+# important
+(priority is high) OR (priority is highest)
+```
+### neither important nor urgent --> drop it
+```tasks  
+not done  
+
+# not urgent
+due after today
+sort by due
+
+# not important
+(priority is not high) AND (priority is not highest)
+```  
