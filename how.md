@@ -6,9 +6,9 @@ Checkout the [detailed guide on how to set up Obsidian](how/setup.md) 🛠️
 
 Checkout the [comprehensive guide on interconnecting your second brain](how/interconnect.md) 🧠
 
-# How to navigate Obsidian?
+# How to navigate and search Obsidian?
 
-Checkout the [essentials on how to navigate within Obsidian](how/navigation.md) 🗺️
+Checkout the [essentials on how to navigate and search within Obsidian](how/navigation.md) 🗺️
 
 # Which Community Plugins are useful?
 
