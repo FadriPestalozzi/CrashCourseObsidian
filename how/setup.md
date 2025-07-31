@@ -49,3 +49,13 @@ To ensure there are no synchronization errors, I turned on plugin synchronizatio
 <div>
   <img src="../pics/sync-turn-on-for-plugins.png" width="500">
 </div> 
+
+
+
+
+### Templates, define folder location
+
+<div>
+  <img src="../pics/setup-templates-folder-location.png" width="500">
+</div> 
+

@@ -25,6 +25,11 @@ Each subsection in this chapter mentions a Community Plugin as title and lists i
 - enable zoom and copy of embedded images 
 - [Examples](plugins/image-toolkit-examples.md)
 
+## Obsidian to Anki
+- export Obsidian notes directly to Anki flashcards for spaced repetition learning
+- maintain formatting and links when converting notes to flashcards
+- [Examples](plugins/obsidian-to-anki-examples.md)
+
 ## Tasks
 - define tasks with deadlines and priorization, e.g. to access via [4 dynamic Eisenhower-lists](plugins/tasks-examples.md#arrange-tasks-into-eisenhower-groups)
 - [Examples](plugins/tasks-examples.md)
@@ -35,6 +40,6 @@ Each subsection in this chapter mentions a Community Plugin as title and lists i
 - create [daily note template](writing.md#how-to-build-a-daily-note-template)
 - [Examples](plugins/templater-examples.md)
 
-### plugin usage
+### Plugin usage
 - define folder where templates are stored
 - [create template file and define hotkey](plugins/templater-examples.md#define-template) to create

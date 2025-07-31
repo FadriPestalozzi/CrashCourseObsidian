@@ -1,10 +1,11 @@
-Excalidraw is an amazingly flexible drawing tool 💖
+# Excalidraw is an amazingly flexible drawing tool 💖
+
 I'm a big fan of its flexibility and intuitive user experience. 
 The examples below illustrate different drawing features in action. 
 
-# create drawing elements 
+# Create drawing elements 
 
-to quickly create elements, 
+To quickly create elements, 
 - either type the associated number
   <img src="../../pics/excalidraw-create-element-by-number.png" width="300">
 - or the assigned letter (e.g. R for Rectangle)
@@ -12,20 +13,20 @@ to quickly create elements,
   <img src="../../pics/excalidraw-create-element-by-letter.png" width="400">
 
 
-# insert image
+# Insert image
 - use Ctrl+V to paste images into an Excalidraw drawing
 - to modify a pasted image (e.g. rename or move to another location) just right-click inside drawing and select "Open Link"
 
 <img src="../../pics/excalidraw-open-pasted-image.png" width="400">
 
-## pasted image
+## Pasted image
 
 file of any file is shown on top center location
 
 <img src="../../pics/excalidraw-pasted-image.png" width="300">
 
 
-# selecting any element opens sidebar to modify:
+# Selecting any element opens sidebar to modify:
 - Stroke = choose color
 - Font family
 - Font size
@@ -36,20 +37,20 @@ file of any file is shown on top center location
 
 <img src="../../pics/excalidraw-select-element-sidebar.png" width="500">
 
-## different color
+## Different color
 
 <img src="../../pics/excalidraw-change-color.png" width="400">
 
 
 
-# lines and arrows can be customized
+# Lines and arrows can be customized
 
 - select "Arrowheads" to change beginning and end of arrow
 - deform by dragging mid-point --> new sub-sections with new midpoints created --> can further deform
 
 <img src="../../pics/excalidraw-arrow-create.png" width="400">
 
-## evolution of an arrow
+## Evolution of an arrow
 <table style="border-collapse: collapse;">
   <tr>
     <td style="border: 1px solid black; text-align: center; vertical-align: top;">
@@ -74,7 +75,7 @@ file of any file is shown on top center location
 </table>
 
 
-# insert link
+# Insert link
 
 1. highlight / select any element
 2. click onto "link" symbol (or use hotkey to insert link)
@@ -94,7 +95,7 @@ file of any file is shown on top center location
 
 <img src="../../pics/excalidraw-element-linked.png" width="400">
 
-## following link opens new tab
+## Following link opens new tab
 
 left-click onto link-symbol to follow link --> this opens link target in new tab
 
@@ -114,7 +115,7 @@ This layout arrangement can be useful when working on a note which is too long f
 
 
 
-# export entire drawing to svg
+# Export entire drawing to svg
 
 I recommend working with SVG = scalable vector graphics. 
 No matter how small or large, the image will always be of perfect quality (no pixelation by zoom). 

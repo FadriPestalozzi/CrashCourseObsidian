@@ -13,27 +13,35 @@ In my template-daily-note I use the [Templater](https://silentvoid13.github.io/T
 
 # insert custom text block using hotkey
 
-You can define your favorite text block and conveniently insert that by using a custom hotkey 🥳
+You can use your favorite text blocks to create templates which can be inserted with custom hotkeys. 
+
+This can save you a lot of time and let you focus on what's relevant for you 🥳
+
 
 ## define template
 
+As an example, let's create a file template-python with the text of an empty python code block and store it inside our <a href="../setup.md#templates-define-folder-location">dedicated folder to hold templates</a>. 
+
 <img src="../../pics/template-python.png" width="300">
+
 
 ## define hotkey
 
-- configure hotkey for target template
+To configure a hotkey for this new template
+
 <img src="../../pics/templater-configure-hotkeys.png" width="400">
 
 - define hotkey
 <img src="../../pics/templater-define-hotkey.png" width="400">
 
-## 🥚 another easter egg
+## applying template
 
 ```python
 
 ```
 
-Using the hotkey `Ctrl + Shift + P` I just inserted the text block above to display some python code.
+Using the hotkey `Ctrl + Shift + P` I just inserted the empty code block above. 
+
 
 ```python
 # Parrot sketch example
@@ -48,6 +56,8 @@ class Parrot:
 polly = Parrot()
 print("Polly says:", polly.speak())
 ```
+
+### sample output
 
 <img src="../../pics/templater-python-example.png" width="400">
 
